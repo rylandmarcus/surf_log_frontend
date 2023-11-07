@@ -28,7 +28,12 @@ const SpotsIndex = () => {
         <button onClick={cancelAddNewSpot}>Cancel Add New Spot</button>
         </div>
         {data.map(s=>(
-            <div key={s.id}>{s.name}</div>
+            <div key={s.id}>
+                <h2>
+                {s.name}
+                </h2>
+                <div>{s.type}, {s.location}, {s.difficulty}</div>
+            </div>
         ))}
     </div>
   )
